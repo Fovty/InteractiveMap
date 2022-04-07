@@ -92,8 +92,8 @@
           <div class="container-fluid d-flex flex-row justify-content-center" style="position: fixed; z-index: -1;">
               <div class="d-flex flex-row justify-content-center">
                   <form class="d-flex flex-row justify-content-center">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 10px">Search</button>
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search - e.g. 120" aria-label="Search">
+                      <!---<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 10px">Search</button>--->
                   </form>
               </div>
           </div>
@@ -162,6 +162,16 @@
   });
 
 
+  //if the value in the search field is the same as the id of a area, select the area
+  $('input').keyup(function() {
+    if ($(this).val() == '110') {
+      $('#b_110').click();
+    }
+    if ($(this).val() == '120') {
+      $('#b_120').click();
+    }
+  });
+
 
   //if clicked on a point where no area is defined, remove the class
   $('#draggable').click(function() {
@@ -172,10 +182,6 @@
       $('#sidebar-wrapper').html(defaultSidebar);
     });
   });
-
-
-
-
 
 
 
