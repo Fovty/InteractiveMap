@@ -154,6 +154,15 @@
     }
   });
 
+  //if the value in the search field is not empty, open the sidebar
+  $('input').keyup(function() {
+    if ($(this).val() != '') {
+      $('body').addClass('sb-sidenav-toggled');
+    }
+  });
+
+
+
   //if clicked on a point where no area is defined, remove the class
   $('#draggable').click(function() {
     $('body').removeClass('sb-sidenav-toggled');
@@ -283,9 +292,7 @@
         var newToolTip = defaultDipTooltip;
         $('#selections').html(xref[e.key]);
         if (e.key === 'asparagus') {
-          newToolTip =
-                  "OK. I know I have come down on the dip before, but let's be real. Raw asparagus without any of that " +
-                  'delicious ranch and onion dressing slathered all over it is not so good.';
+          newToolTip = '';
         }
         image.mapster('set_options', {
           areas: [
