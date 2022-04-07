@@ -92,7 +92,7 @@
           <div class="container-fluid d-flex flex-row justify-content-center" style="position: fixed; z-index: -1;">
               <div class="d-flex flex-row justify-content-center">
                   <form class="d-flex flex-row justify-content-center">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search - e.g. 120" aria-label="Search">
+                      <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search - e.g. 120" aria-label="Search">
                       <!---<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 10px">Search</button>--->
                   </form>
               </div>
@@ -166,9 +166,11 @@
   $('input').keyup(function() {
     if ($(this).val() == '110') {
       $('#b_110').click();
+      list = [];
     }
     if ($(this).val() == '120') {
       $('#b_120').click();
+      list = [];
     }
   });
 
@@ -194,19 +196,31 @@
   });
 
   //make the map draggable
-  var dragDistance = 500;
+  var dragDistance = 150;
   $( function() {
     $( "#draggable" ).draggable({
       containment: "#containment-wrapper",
       scroll: false,
-      drag: function( event, ui ) {
-        if ( ui.position.left > dragDistance || ui.position.left < -dragDistance || ui.position.top > dragDistance || ui.position.top < -dragDistance ) {
-          $( this ).draggable( "option", "revert", true );}
-        else
-        {
-          $(this).draggable("option", "revert", false);
+        start: function(event, ui) {
+            ui.helper.addClass('active');
+        },
+        stop: function(event, ui) {
+            ui.helper.removeClass('active');
+        },
+        drag: function(event, ui) {
+            if (ui.position.left > dragDistance) {
+                ui.position.left = dragDistance;
+            }
+            if (ui.position.left < -dragDistance) {
+                ui.position.left = -dragDistance;
+            }
+            if (ui.position.top > dragDistance) {
+                ui.position.top = dragDistance;
+            }
+            if (ui.position.top < -dragDistance) {
+                ui.position.top = -dragDistance;
+            }
         }
-      }
     });
   } );
 
@@ -237,9 +251,11 @@
     }
     else if ($(window).width() > 768) {
       $('.image-map').css({transform: 'translate(100px, -750px) scale(2.0)',});
+      $('#search').remove();
     }
     else if ($(window).width() > 250) {
       $('.image-map').css({transform: 'translate(50px, -700px) scale(2.2)',});
+      $('#search').remove();
     }
 
 
