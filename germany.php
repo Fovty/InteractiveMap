@@ -16,22 +16,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link href="./assets/css/styles.css" rel="stylesheet" />
 
-    <style>
-        .btn-dark:focus,
-        .btn-dark:active{
-            box-shadow:none !important;
-            outline:0px !important;
-        }
-
-        .navbar-brand{
-            font-size: 18px;
-        }
-    </style>
 
     <script>
-
-
-
 
         var defaultSidebar = "    <div id=\"selections\">\n" +
             "      <div class=\"sidebar-heading border-bottom bg-light p-3\" style=\"height: 72.4px; text-align: center; font-size: 24px; font-weight: bold\">Werk 1 / 2</div>\n" +
@@ -53,7 +39,6 @@
             "      </div>\n" +
             "    </div>";
 
-
     </script>
 
 </head>
@@ -61,16 +46,13 @@
 
 <body class="sb-sidenav-toggled" style="overflow: hidden;">
 
-
-
     <div class="d-flex flex-row-reverse" id="wrapper" style="overflow: hidden;">
-
-
 
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper" style="z-index: 1030;">
             <script>document.write(defaultSidebar);</script>
         </div>
+
         <!-- Page content wrapper-->
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3" style="z-index: 1030;">
@@ -87,12 +69,9 @@
         </div>
     </div>
 
-
-
-
 </body>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?> <!-- Footer -->
 
 </html>
 

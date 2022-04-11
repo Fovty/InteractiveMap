@@ -17,19 +17,26 @@
   <link href="./assets/css/styles.css" rel="stylesheet" />
 
   <style>
-    .btn-dark:focus,
-    .btn-dark:active{
-      box-shadow:none !important;
-      outline:0px !important;
-    }
 
-    .navbar-brand{
-      font-size: 18px;
-    }
+      #search { /* remove outer border fdrom searchbar */
+          outline: none !important;
+          border: 0px;
+          box-shadow: 0 0 0;
+      }
+
+      [type=search]::-webkit-search-cancel-button { /* change color of clear button in searchbar */
+          -webkit-appearance: none;
+          height: 10px;
+          width: 10px;
+          background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjEyMy4wNXB4IiBoZWlnaHQ9IjEyMy4wNXB4IiB2aWV3Qm94PSIwIDAgMTIzLjA1IDEyMy4wNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIzLjA1IDEyMy4wNTsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTEyMS4zMjUsMTAuOTI1bC04LjUtOC4zOTljLTIuMy0yLjMtNi4xLTIuMy04LjUsMGwtNDIuNCw0Mi4zOTlMMTguNzI2LDEuNzI2Yy0yLjMwMS0yLjMwMS02LjEwMS0yLjMwMS04LjUsMGwtOC41LDguNQ0KCQljLTIuMzAxLDIuMy0yLjMwMSw2LjEsMCw4LjVsNDMuMSw0My4xbC00Mi4zLDQyLjVjLTIuMywyLjMtMi4zLDYuMSwwLDguNWw4LjUsOC41YzIuMywyLjMsNi4xLDIuMyw4LjUsMGw0Mi4zOTktNDIuNGw0Mi40LDQyLjQNCgkJYzIuMywyLjMsNi4xLDIuMyw4LjUsMGw4LjUtOC41YzIuMy0yLjMsMi4zLTYuMSwwLTguNWwtNDIuNS00Mi40bDQyLjQtNDIuMzk5QzEyMy42MjUsMTcuMTI1LDEyMy42MjUsMTMuMzI1LDEyMS4zMjUsMTAuOTI1eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
+          background-size: 10px 10px;
+      }
+
   </style>
 
   <script>
 
+    /* default sidebar if nothing is selected or typed in the searchbar */
     var defaultSidebar = "    <div id=\"selections\">\n" +
             "      <div class=\"sidebar-heading border-bottom bg-light p-3\" style=\"height: 72.4px; text-align: center; font-size: 24px; font-weight: bold\">Werk 1 / 2</div>\n" +
             "      <div class=\"list-group list-group-flush\">\n" +
@@ -41,10 +48,10 @@
             "        </div>\n" +
             "        <div class=\"container\">\n" +
             "          <br>\n" +
-            "          <h5 class=\"list-group-item-heading\">Headline</h5>\n" +
+            "          <h5 class=\"list-group-item-heading\">Produktion</h5>\n" +
             "          <p>Das BaP fertigt Erzeugnisse und Erzeugniskomponenten für die Geschäftsbereiche Powertrain Solutions und Automotive Aftermarket</p>\n" +
             "          <br>\n" +
-            "          <h5 class=\"list-group-item-heading\">Headline2</h5>\n" +
+            "          <h5 class=\"list-group-item-heading\">Leitwerk</h5>\n" +
             "          <p>Das BaP ist Leitwerk in allen Produkten, die im Werk produziert werden – das ist einzigartig bei Bosch</p>\n" +
             "          <ul>\n" +
             "            <li>106.000 m2 Nutzungsgesamtfläche</li>\n" +
@@ -55,7 +62,6 @@
             "      </div>\n" +
             "    </div>";
 
-
   </script>
 
 </head>
@@ -63,71 +69,60 @@
 
 <body class="sb-sidenav-toggled" style="overflow: hidden;">
 
+    <div class="d-flex flex-row-reverse" id="wrapper" style="overflow: hidden;">
 
-
-<div class="d-flex flex-row-reverse" id="wrapper" style="overflow: hidden;">
-
-
-
-  <!-- Sidebar-->
-  <div class="border-end bg-white" id="sidebar-wrapper" style="z-index: 1030;">
-    <script>document.write(defaultSidebar);</script>
-  </div>
-  <!-- Page content wrapper-->
-  <div class="container-fluid p-0">
-      <!-- fix searchbar hover in the center of the page -->
-
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3" style="z-index: 1030;">
-      <a class="navbar-brand" href="./index.php"></a>
-      <a class="navbar-brand" id="europe" href="./index.php">Europe</a>
-      <a class="navbar-brand" href="#">></a>
-      <a class="navbar-brand" id="germany" href="germany.php">Germany</a>
-      <a class="navbar-brand" href="#">></a>
-      <a class="navbar-brand" id="bamberg" href="bamberg.php">Bamberg</a>
-      <a class="navbar-brand" href="#">></a>
-      <a class="navbar-brand" id="wt12" href="#" style="font-weight: bold">WT 1 / 2</a>
-
-
-          <div class="container-fluid d-flex flex-row justify-content-center" style="position: fixed; z-index: -1;">
-              <div class="d-flex flex-row justify-content-center">
-                  <form class="d-flex flex-row justify-content-center">
-                      <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search - e.g. 120" aria-label="Search">
-                      <!---<button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 10px">Search</button>--->
-                  </form>
-              </div>
-          </div>
-
-
-
-      <div class="navbar-nav ms-auto">
-        <button class="btn btn-dark" type="button" ><span class="navbar-toggler-icon" id="sidebarToggle"></span></button>
+      <!-- Sidebar -->
+      <div class="border-end bg-white" id="sidebar-wrapper" style="z-index: 1030;">
+        <script>document.write(defaultSidebar);</script>
       </div>
-    </nav>
-  </div>
-</div>
+
+      <!-- Page content wrapper -->
+      <div class="container-fluid p-0">
+
+          <!-- Navigation -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3" style="z-index: 1030;">
+              <a class="navbar-brand" href="./index.php"></a>
+              <a class="navbar-brand" id="europe" href="./index.php">Europe</a>
+              <a class="navbar-brand" href="#">></a>
+              <a class="navbar-brand" id="germany" href="germany.php">Germany</a>
+              <a class="navbar-brand" href="#">></a>
+              <a class="navbar-brand" id="bamberg" href="bamberg.php">Bamberg</a>
+              <a class="navbar-brand" href="#">></a>
+              <a class="navbar-brand" id="wt12" href="#" style="font-weight: bold">WT 1 / 2</a>
+
+              <!-- Searchbar -->
+              <div class="container-fluid d-flex flex-row justify-content-center" style="position: fixed; z-index: -1;">
+                  <div class="d-flex flex-row justify-content-center">
+                      <form class="d-flex flex-row justify-content-center">
+                          <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search - e.g. 120" aria-label="Search">
+                      </form>
+                  </div>
+              </div>
+
+              <!-- Toggle Navbar -->
+              <div class="navbar-nav ms-auto">
+                <button class="btn btn-dark" type="button" ><span class="navbar-toggler-icon" id="sidebarToggle"></span></button>
+              </div>
+          </nav>
+      </div>
+    </div>
 
 
-<div class="container-fluid p-0">
+    <div class="container-fluid p-0">
 
+      <div id="draggable" class="ui-widget-content image-map"> <!-- Map Image -->
+        <img src="./assets/images/map2.png" id="image" usemap="#image-map" class="w-100 scroll">
+      </div>
 
+      <map name="image-map"> <!-- Coordinates for Selections -->
+          <area target="" id="b_110" name="b_110" alt="110" title="110" href="" coords="1842,1331,1839,1216,1960,1210,1957,1331" shape="poly">
+        <area target="" id="b_120" name="b_120" alt="120" title="120" href="" coords="1019,1041,961,739,1323,670,1390,1029,1115,1083,1103,1023" shape="poly">
+      </map>
 
-  <div id="draggable" class="ui-widget-content image-map">
-    <img src="./assets/images/map2.png" id="image" usemap="#image-map" class="w-100 scroll">
-  </div>
-  <map name="image-map">
-    <area target="" id="b_110" name="b_110" alt="110" title="110" href="" coords="1842,1331,1839,1216,1960,1210,1957,1331" shape="poly">
-    <area target="" id="b_120" name="b_120" alt="120" title="120" href="" coords="1019,1041,961,739,1323,670,1390,1029,1115,1083,1103,1023" shape="poly">
-  </map>
-</div>
+    </div>
 </body>
 
-
-
-
-
-
-<?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?> <!-- Footer -->
 
 
 <script type="text/javascript">
@@ -268,7 +263,8 @@
 
 <script type="text/javascript">
 
-  $(document).ready(function () {
+    //image mapster config
+    $(document).ready(function () {
     'use strict';
 
     var image = $('img'),
@@ -332,8 +328,6 @@
       ]
     });
   });
-
-
 
 </script>
 
