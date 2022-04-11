@@ -18,7 +18,7 @@
 
   <style>
 
-      #search { /* remove outer border fdrom searchbar */
+      #search { /* remove outer border from searchbar */
           outline: none !important;
           border: 0px;
           box-shadow: 0 0 0;

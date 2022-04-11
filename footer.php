@@ -2,7 +2,7 @@
 
     <div class="container">
         <div class="text-center text-muted">
-            <p style="margin-bottom: 0">Map - v.2022.4.1</p>
+            <p style="margin-bottom: 0">Map - v.2022.4.2</p>
         </div>
     </div>
 </footer>
