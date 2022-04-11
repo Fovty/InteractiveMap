@@ -11354,3 +11354,16 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     width: 400px;
   }
 }
+
+
+/*Specific Parameters*/
+
+.btn-dark:focus,
+.btn-dark:active{
+  box-shadow:none !important;
+  outline:0px !important;
+}
+
+.navbar-brand {
+  font-size: 18px;
+}
