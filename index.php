@@ -21,6 +21,7 @@
         .btn-dark:active{
             box-shadow:none !important;
             outline:0px !important;
+            /*nice*/
         }
 
         .navbar-brand{
