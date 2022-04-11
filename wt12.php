@@ -273,7 +273,7 @@
                       '    <div class="list-group list-group-flush">\n' +
                       '      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>\n' +
                       '    </div>\n' +
-                      '    ',
+                      '    <a href="110.php" class="btn btn-secondary">Besuchen</a>',
               b_140:'b_140',
               b_130:'b_130',
               b_135:'b_135',

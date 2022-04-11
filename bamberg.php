@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--- <link rel="icon" type="image/x-icon" href=""> --->
+    <link rel="icon" type="image/x-icon" href="./assets/images/map-favicon.ico">
 
     <script src='https://code.jquery.com/jquery-3.6.0.js'></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
